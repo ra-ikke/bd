@@ -29,7 +29,7 @@ CREATE DEFINER=`root`@`localhost` TRIGGER `ControleDeEstoque` AFTER INSERT ON `i
 	WHERE NEW.Medicamento_idMed = me.Medicamento_idMed INTO EstoquePosVenda;
 
     
-    ## Verificando se o estoque atual esta dentro do limiti minimo
+    ## Verificando se o estoque atual esta dentro do limite minimo
     
     IF (EstoquePosVenda <= EstoqueMinimo)
     THEN 
